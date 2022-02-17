@@ -14,6 +14,9 @@ class UserApplicationService(
 ) {
     private val logger = LoggerFactory.getLogger(this::class.java)
     
+    /****
+     * método para buscar um usuário 
+     */
     fun getById(id: Long): Customer {
         logger.info("Searching for user: $id")
         return userRepository.findById(id)

@@ -13,6 +13,10 @@ import org.springframework.web.bind.annotation.*
 class UserController(
     private val userApplicationService: UserApplicationService
 ) {
+    /***
+     *
+     * Endpoint para buscar e retornar um usuário
+     */
     @GetMapping("/{id}")
     fun getUserById(@PathVariable id: Long): ResponseEntity<Customer> {
         try {
